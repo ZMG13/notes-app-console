@@ -1,12 +1,16 @@
+
 import controllers.NoteAPI
 import models.Note
 import mu.KotlinLogging
+import persistence.JSONSerializer
 import utils.ScannerInput
 import utils.ScannerInput.readNextInt
 import utils.ScannerInput.readNextLine
+import java.io.File
 import java.lang.System.exit
 private val logger = KotlinLogging.logger {}
-private val noteAPI = NoteAPI()
+//private val noteAPI = NoteAPI(XMLSerializer(File("notes.xml")))
+private val noteAPI = NoteAPI(JSONSerializer(File("notes.json")))
 
 fun main(args: Array<String>) {
     runMenu()
@@ -23,6 +27,8 @@ fun mainMenu() : Int {
          > |   2) List all notes            |
          > |   3) Update a note             |
          > |   4) Delete a note             |
+         > |   20) save notes               |
+         > |   21) load notes               |
          > ----------------------------------
          > |   0) Exit                      |
          > ----------------------------------
@@ -38,6 +44,8 @@ fun runMenu() {
             3  -> updateNote()
             4  -> deleteNote()
             0  -> exitApp()
+            20 -> save()
+            21 -> load()
             else -> System.out.println("Invalid option entered: ${option}")
         }
     } while (true)
@@ -105,6 +113,25 @@ fun exitApp(){
     println("Exiting...bye")
     exit(0)
 }
+fun save() {
+    try {
+        noteAPI.store()
+    } catch (e: Exception) {
+        System.err.println("Error writing to file: $e")
+    }
+}
+
+fun load() {
+    try {
+        noteAPI.load()
+    } catch (e: Exception) {
+        System.err.println("Error reading from file: $e")
+    }
+}
+
+
+
+
 
 
 
