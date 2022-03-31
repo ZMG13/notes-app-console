@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="controllers.NoteAPITest$AddNotes" tests="2" skipped="0" failures="2" errors="0" timestamp="2022-03-31T00:40:17" hostname="ZACH-LAPTOP" time="0.002">
+<testsuite name="controllers.NoteAPITest$AddNotes" tests="2" skipped="0" failures="2" errors="0" timestamp="2022-03-31T00:44:57" hostname="ZACH-LAPTOP" time="0.003">
   <properties/>
   <testcase name="adding a Note to a populated list adds to ArrayList()" classname="controllers.NoteAPITest$AddNotes" time="0.001">
     <failure message="junit.framework.AssertionFailedError: expected:&lt;5&gt; but was:&lt;20&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;5&gt; but was:&lt;20&gt;
@@ -111,7 +111,7 @@
 	at java.base/java.lang.Thread.run(Thread.java:831)
 </failure>
   </testcase>
-  <testcase name="adding a Note to an empty list adds to ArrayList()" classname="controllers.NoteAPITest$AddNotes" time="0.0">
+  <testcase name="adding a Note to an empty list adds to ArrayList()" classname="controllers.NoteAPITest$AddNotes" time="0.001">
     <failure message="junit.framework.AssertionFailedError: expected:&lt;0&gt; but was:&lt;25&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;0&gt; but was:&lt;25&gt;
 	at junit.framework.Assert.fail(Assert.java:57)
 	at junit.framework.Assert.failNotEquals(Assert.java:329)

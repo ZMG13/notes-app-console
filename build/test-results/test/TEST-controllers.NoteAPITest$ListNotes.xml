@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="controllers.NoteAPITest$ListNotes" tests="2" skipped="0" failures="2" errors="0" timestamp="2022-03-31T00:40:17" hostname="ZACH-LAPTOP" time="0.002">
+<testsuite name="controllers.NoteAPITest$ListNotes" tests="2" skipped="0" failures="2" errors="0" timestamp="2022-03-31T00:44:57" hostname="ZACH-LAPTOP" time="0.002">
   <properties/>
-  <testcase name="listAllNotes returns No Notes Stored message when ArrayList is empty()" classname="controllers.NoteAPITest$ListNotes" time="0.0">
+  <testcase name="listAllNotes returns No Notes Stored message when ArrayList is empty()" classname="controllers.NoteAPITest$ListNotes" time="0.001">
     <failure message="junit.framework.AssertionFailedError: expected:&lt;0&gt; but was:&lt;30&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;0&gt; but was:&lt;30&gt;
 	at junit.framework.Assert.fail(Assert.java:57)
 	at junit.framework.Assert.failNotEquals(Assert.java:329)
