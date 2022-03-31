@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="controllers.NoteAPITest$PersistenceTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-31T16:56:00" hostname="ZACH-LAPTOP" time="0.057">
-  <properties/>
-  <testcase name="saving and loading an empty collection in XML doesn't crash app()" classname="controllers.NoteAPITest$PersistenceTests" time="0.046"/>
-  <testcase name="saving and loading an loaded collection in XML doesn't loose data()" classname="controllers.NoteAPITest$PersistenceTests" time="0.011"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
