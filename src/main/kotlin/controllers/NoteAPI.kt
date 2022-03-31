@@ -7,6 +7,7 @@ import models.Note
 
 class NoteAPI {
     private var notes = ArrayList<Note>()
+
     fun add(note: Note): Boolean {
         return notes.add(note)
     }
@@ -111,5 +112,11 @@ class NoteAPI {
             }
         }
         return counter
+    }
+
+    fun deleteNote(indexToDelete: Int): Note? {
+        return if (isValidListIndex(indexToDelete, notes)) {
+            notes.removeAt(indexToDelete)
+        } else null
     }
 }
