@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="controllers.NoteAPITest$UpdateNotes" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-31T16:03:11" hostname="ZACH-LAPTOP" time="0.006">
+<testsuite name="controllers.NoteAPITest$UpdateNotes" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-31T16:50:30" hostname="ZACH-LAPTOP" time="0.003">
   <properties/>
-  <testcase name="updating a note that exists returns true and updates()" classname="controllers.NoteAPITest$UpdateNotes" time="0.003"/>
+  <testcase name="updating a note that exists returns true and updates()" classname="controllers.NoteAPITest$UpdateNotes" time="0.001"/>
   <testcase name="updating a note that does not exist returns false()" classname="controllers.NoteAPITest$UpdateNotes" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
