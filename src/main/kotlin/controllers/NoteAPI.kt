@@ -2,10 +2,11 @@ package controllers
 
 import models.Note
 
-private var notes = ArrayList<Note>()
+
 
 
 class NoteAPI {
+    private var notes = ArrayList<Note>()
     fun add(note: Note): Boolean {
         return notes.add(note)
     }
