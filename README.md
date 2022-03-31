@@ -12,3 +12,8 @@ notes-app-console was created for assignment two of our software systems two mod
 - deleting a note
 - includes logging capabilities 
 - scanner input included for robust user 
+
+# v2.0
+- added test functionality 
+- worked on issues
+- added counting 
