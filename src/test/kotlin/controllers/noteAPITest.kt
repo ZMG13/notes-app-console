@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import persistence.JSONSerializer
 import persistence.XMLSerializer
+import persistence.YAMLSerializer
 import java.io.File
 import java.util.*
 
@@ -314,5 +315,42 @@ class NoteAPITest {
             assertTrue(populatedNotes!!.archiveNote(1))
             assertTrue(populatedNotes!!.findNote(1)!!.isNoteArchived)
         }
+    }
+    @Test
+    fun `saving and loading an empty collection in YAML doesn't crash app`() {
+        // Saving an empty notes.YAML file.
+        val storingNotes = NoteAPI(YAMLSerializer(File("notes.YAML")))
+        storingNotes.store()
+
+        //Loading the empty notes.YAML file into a new object
+        val loadedNotes = NoteAPI(YAMLSerializer(File("notes.YAML")))
+        loadedNotes.load()
+
+        //Comparing the source of the notes (storingNotes) with the YAML loaded notes (loadedNotes)
+        assertEquals(0, storingNotes.numberOfNotes())
+        assertEquals(0, loadedNotes.numberOfNotes())
+        assertEquals(storingNotes.numberOfNotes(), loadedNotes.numberOfNotes())
+    }
+
+    @Test
+    fun `saving and loading an loaded collection in YAML doesn't loose data`() {
+        // Storing 3 notes to the notes.YAML file.
+        val storingNotes = NoteAPI(YAMLSerializer(File("notes.YAML")))
+        storingNotes.add(testApp!!)
+        storingNotes.add(swim!!)
+        storingNotes.add(summerHoliday!!)
+        storingNotes.store()
+
+        //Loading notes.YAML into a different collection
+        val loadedNotes = NoteAPI(YAMLSerializer(File("notes.YAML")))
+        loadedNotes.load()
+
+        //Comparing the source of the notes (storingNotes) with the YAML loaded notes (loadedNotes)
+        assertEquals(3, storingNotes.numberOfNotes())
+        assertEquals(3, loadedNotes.numberOfNotes())
+        assertEquals(storingNotes.numberOfNotes(), loadedNotes.numberOfNotes())
+        assertEquals(storingNotes.findNote(0), loadedNotes.findNote(0))
+        assertEquals(storingNotes.findNote(1), loadedNotes.findNote(1))
+        assertEquals(storingNotes.findNote(2), loadedNotes.findNote(2))
     }
 }
