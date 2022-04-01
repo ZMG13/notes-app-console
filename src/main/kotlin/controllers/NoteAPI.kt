@@ -11,7 +11,7 @@ class NoteAPI(serializerType: Serializer) {
         return notes.add(note)
     }
 
-    fun listAllNotes(): String {
+ /*   fun listAllNotes(): String {
         return if (notes.isEmpty()) {
             "No notes stored"
         } else {
@@ -22,6 +22,12 @@ class NoteAPI(serializerType: Serializer) {
             listOfNotes
         }
     }
+    */
+ fun listAllNotes(): String =
+     if  (notes.isEmpty()) "No notes stored"
+     else notes.joinToString (separator = "\n") { note ->
+         notes.indexOf(note).toString() + ": " + note.toString() }
+
     fun numberOfNotes(): Int {
         return notes.size
     }
