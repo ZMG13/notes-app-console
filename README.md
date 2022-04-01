@@ -4,7 +4,7 @@ Console notes app written in kotlin
 # Background
 notes-app-console was created for assignment two of our software systems two moduel for year 2 semester two of software systems development course at wit 
 
-# Features 
+# v1.0 Features 
 - Menu 
 - items for adding a note
 - listing a note
@@ -27,3 +27,13 @@ notes-app-console was created for assignment two of our software systems two mod
 - Load and save added 
 - update a note added 
 - delete a note added 
+
+
+# v4.0 features 
+- list lambdas added 
+- counting lambdas added
+- search feature added 
+- search lambdas 
+- tracked files 
+ 
+- 
