@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="controllers.NoteAPITest" tests="11" skipped="0" failures="0" errors="0" timestamp="2022-03-31T17:45:00" hostname="ZACH-LAPTOP" time="0.469">
+<testsuite name="controllers.NoteAPITest" tests="11" skipped="0" failures="0" errors="0" timestamp="2022-04-01T14:19:10" hostname="ZACH-LAPTOP" time="0.479">
   <properties/>
-  <testcase name="saving and loading an loaded collection in YAML doesn't loose data()" classname="controllers.NoteAPITest" time="0.313"/>
-  <testcase name="saving and loading an loaded collection in JSON doesn't loose data()" classname="controllers.NoteAPITest" time="0.05"/>
-  <testcase name="listActiveNotes returns no active notes stored when ArrayList is empty()" classname="controllers.NoteAPITest" time="0.018"/>
-  <testcase name="listNotesBySelectedPriority returns No Notes when ArrayList is empty()" classname="controllers.NoteAPITest" time="0.002"/>
-  <testcase name="saving and loading an empty collection in YAML doesn't crash app()" classname="controllers.NoteAPITest" time="0.014"/>
+  <testcase name="saving and loading an loaded collection in YAML doesn't loose data()" classname="controllers.NoteAPITest" time="0.373"/>
+  <testcase name="saving and loading an loaded collection in JSON doesn't loose data()" classname="controllers.NoteAPITest" time="0.026"/>
+  <testcase name="listActiveNotes returns no active notes stored when ArrayList is empty()" classname="controllers.NoteAPITest" time="0.016"/>
+  <testcase name="listNotesBySelectedPriority returns No Notes when ArrayList is empty()" classname="controllers.NoteAPITest" time="0.0"/>
+  <testcase name="saving and loading an empty collection in YAML doesn't crash app()" classname="controllers.NoteAPITest" time="0.011"/>
   <testcase name="listActiveNotes returns active notes when ArrayList has active notes stored()" classname="controllers.NoteAPITest" time="0.002"/>
   <testcase name="listArchivedNotes returns no archived notes when ArrayList is empty()" classname="controllers.NoteAPITest" time="0.002"/>
-  <testcase name="listNotesBySelectedPriority returns all notes that match that priority when notes of that priority exist()" classname="controllers.NoteAPITest" time="0.045"/>
-  <testcase name="listNotesBySelectedPriority returns no notes when no notes of that priority exist()" classname="controllers.NoteAPITest" time="0.001"/>
-  <testcase name="listArchivedNotes returns archived notes when ArrayList has archived notes stored()" classname="controllers.NoteAPITest" time="0.002"/>
-  <testcase name="saving and loading an empty collection in JSON doesn't crash app()" classname="controllers.NoteAPITest" time="0.011"/>
+  <testcase name="listNotesBySelectedPriority returns all notes that match that priority when notes of that priority exist()" classname="controllers.NoteAPITest" time="0.033"/>
+  <testcase name="listNotesBySelectedPriority returns no notes when no notes of that priority exist()" classname="controllers.NoteAPITest" time="0.0"/>
+  <testcase name="listArchivedNotes returns archived notes when ArrayList has archived notes stored()" classname="controllers.NoteAPITest" time="0.001"/>
+  <testcase name="saving and loading an empty collection in JSON doesn't crash app()" classname="controllers.NoteAPITest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

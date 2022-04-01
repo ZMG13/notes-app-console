@@ -64,7 +64,7 @@ class NoteAPI(serializerType: Serializer) {
         }
     }
 
-    fun numberOfArchivedNotes(): Int {
+  /*  fun numberOfArchivedNotes(): Int {
         var counter = 0
         for (note in notes) {
             if (note.isNoteArchived) {
@@ -72,9 +72,24 @@ class NoteAPI(serializerType: Serializer) {
             }
         }
         return counter
+    }*/
+
+    fun numberOfArchivedNotes(): Int {
+        return notes.stream()
+            .filter{ note: Note -> note.isNoteArchived }
+            .count()
+            .toInt()
     }
 
+
     fun numberOfActiveNotes(): Int {
+        return notes.stream()
+            .filter{ note: Note -> !note.isNoteArchived }
+            .count()
+            .toInt()
+    }
+    /*
+       fun numberOfActiveNotes(): Int {
         var counter = 0
         for (note in notes) {
             if (!note.isNoteArchived) {
@@ -83,6 +98,7 @@ class NoteAPI(serializerType: Serializer) {
         }
         return counter
     }
+     */
     fun listNotesBySelectedPriority(priority: Int): String {
         return if (notes.isEmpty()) {
             "No notes stored"
@@ -102,7 +118,7 @@ class NoteAPI(serializerType: Serializer) {
             }
         }
     }
-
+/*
     fun numberOfNotesByPriority(priority: Int): Int {
         var counter = 0
         for (note in notes) {
@@ -112,6 +128,13 @@ class NoteAPI(serializerType: Serializer) {
         }
         return counter
     }
+*/
+fun numberOfNotesByPriority(priority: Int): Int {
+    return notes.stream()
+        .filter{ note: Note -> note.notePriority == priority }
+        .count()
+        .toInt()
+}
 
     fun deleteNote(indexToDelete: Int): Note? {
         return if (isValidListIndex(indexToDelete, notes)) {
