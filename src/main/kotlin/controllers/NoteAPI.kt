@@ -11,7 +11,7 @@ class NoteAPI(serializerType: Serializer) {
         return notes.add(note)
     }
 
-    fun listAllNotes(): String {
+ /*   fun listAllNotes(): String {
         return if (notes.isEmpty()) {
             "No notes stored"
         } else {
@@ -22,6 +22,12 @@ class NoteAPI(serializerType: Serializer) {
             listOfNotes
         }
     }
+    */
+ fun listAllNotes(): String =
+     if  (notes.isEmpty()) "No notes stored"
+     else notes.joinToString (separator = "\n") { note ->
+         notes.indexOf(note).toString() + ": " + note.toString() }
+
     fun numberOfNotes(): Int {
         return notes.size
     }
@@ -36,7 +42,8 @@ class NoteAPI(serializerType: Serializer) {
     fun isValidListIndex(index: Int, list: List<Any>): Boolean {
         return (index >= 0 && index < list.size)
     }
-    fun listActiveNotes(): String {
+
+  /*  fun listActiveNotes(): String {
         return if (numberOfActiveNotes() == 0) {
             "No active notes stored"
         } else {
@@ -48,9 +55,13 @@ class NoteAPI(serializerType: Serializer) {
             }
             listOfActiveNotes
         }
-    }
-
-    fun listArchivedNotes(): String {
+    } */
+    fun listActiveNotes(): String =
+      if  (numberOfActiveNotes() == 0) "No active notes stored"
+      else notes.filter { note -> note.isNoteArchived == true}
+          .joinToString (separator = "\n")
+          { note -> notes.indexOf(note).toString() + ": " + note.toString() }
+   /* fun listArchivedNotes(): String {
         return if (numberOfArchivedNotes() == 0) {
             "No archived notes stored"
         } else {
@@ -63,6 +74,13 @@ class NoteAPI(serializerType: Serializer) {
             listOfArchivedNotes
         }
     }
+   */
+
+   fun listArchivedNotes(): String =
+       if  (numberOfArchivedNotes() == 0) "No archived notes stored"
+       else notes.filter { note -> note.isNoteArchived == true}
+           .joinToString (separator = "\n")
+       { note -> notes.indexOf(note).toString() + ": " + note.toString() }
 
   /*  fun numberOfArchivedNotes(): Int {
         var counter = 0
