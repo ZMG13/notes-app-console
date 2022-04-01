@@ -35,5 +35,4 @@ notes-app-console was created for assignment two of our software systems two mod
 - search feature added 
 - search lambdas 
 - tracked files 
- 
-- 
+- refactoring 
