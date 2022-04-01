@@ -121,6 +121,7 @@ fun numberOfNotesByPriority(priority: Int): Int = notes.count { note: Note -> no
         } else null
     }
 
+
     fun updateNote(indexToUpdate: Int, note: Note?): Boolean {
         //find the note object by the index number
         val foundNote = findNote(indexToUpdate)
